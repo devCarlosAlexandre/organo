@@ -1,5 +1,25 @@
-export const Dropdownn = () = >  {
-    return (
-        
-)
+.lista-suspensa {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.lista-suspensa select {
+  background-color: #fff;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border: solid 1px #cccc;
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  &:hover {
+    border-color: #ababab;
+  }
+}
+
+.lista-suspensa label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.lista-suspensa option {
 }
