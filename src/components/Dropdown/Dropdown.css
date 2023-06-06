@@ -1,6 +1,7 @@
 .lista-suspensa {
   display: block;
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .lista-suspensa select {
@@ -11,6 +12,7 @@
   padding: 24px;
   box-sizing: border-box;
   border-radius: 8px;
+  font-size: 16px;
   &:hover {
     border-color: #ababab;
   }
@@ -19,7 +21,9 @@
 .lista-suspensa label {
   display: block;
   margin-bottom: 8px;
+  font-size: 18px;
 }
 
 .lista-suspensa option {
+  font-size: 16px;
 }

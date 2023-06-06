@@ -1,9 +1,11 @@
 .campo-texto {
+  margin-top: 8px;
 }
 
 .campo-texto label {
   display: block;
   margin-bottom: 8px;
+  font-size: 18px;
 }
 
 .campo-texto input {
@@ -13,6 +15,7 @@
   border: solid 1px #cccc;
   padding: 24px;
   box-sizing: border-box;
+  font-size: 16px;
   border-radius: 8px;
   &:hover {
     border-color: #ababab;
