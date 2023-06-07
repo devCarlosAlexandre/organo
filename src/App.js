@@ -4,7 +4,13 @@ import { Formulario } from './components/Formulario';
 import { Time } from './components/Time';
 
 function App() {
-  const [colaboradores, setColaboradores] = useState([]);
+  const [colaboradores, setColaboradores] = useState([{
+    nome: "",
+    cargo: "",
+    foto: "",
+    time: ""
+  }]);
+
 
   const times = [
     {
@@ -53,9 +59,16 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario times={times.map(time => time.nome)} />
+      <Formulario concluir={value => handleColaboradores(value)} times={times.map(time => time.nome)} />
       {
-        times.map((time, index) => <Time key={index} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} />)
+        times.map((time, index) => <Time
+          users={colaboradores.filter(user => user.time === time.nome)}
+          key={index}
+          nome={time.nome}
+          corPrimaria={time.corPrimaria}
+          corSecundaria={time.corSecundaria}
+        />
+        )
       }
     </div>
   );

@@ -5,7 +5,7 @@ import { Textfield } from '../Textfield';
 import './Formulario.css'
 
 
-export const Formulario = ({ times }) => {
+export const Formulario = ({ times, concluir, }) => {
     const [nome, setNome] = useState("");
     const [cargo, setCargo] = useState("");
     const [foto, setFoto] = useState("");
@@ -13,7 +13,15 @@ export const Formulario = ({ times }) => {
 
     const handleSave = (event) => {
         event.preventDefault()
-        console.log("Ola")
+        concluir({
+            nome,
+            cargo,
+            time,
+            foto
+        })
+        setNome('')
+        setCargo('')
+        setFoto('')
     }
     return (
         <section className='formulario'>
@@ -46,8 +54,8 @@ export const Formulario = ({ times }) => {
                     itens={times}
                     label={"Time"}
                 />
-                <Button>
-                    Cadastrar card
+                <Button type='submit'>
+                    Cadastrar Card
                 </Button>
             </form>
         </section>
